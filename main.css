@@ -94,5 +94,6 @@ body{
 }
 #musicplay{
     display: flex;
-    height: 0%
+    height: 0%;
+    margin-top: -50%
 }
