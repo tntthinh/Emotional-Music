@@ -74,7 +74,7 @@ let gen = document.getElementById(`genres`)
 let emo = document.getElementById(`emotion`)
 let playBtn = document.getElementById(`play`)
 let vid = document.getElementById("show")
-let musicPlay = document.getElementById('music-play')
+let musicPlay = document.getElementById('musicplay')
 vid.addEventListener('submit',(e)=>{
     e.preventDefault()
     console.log("ok")
