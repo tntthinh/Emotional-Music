@@ -73,40 +73,48 @@ let vIns = [`<iframe width="853" height="480" src="https://www.youtube.com/embed
 let gen = document.getElementById(`genres`)
 let emo = document.getElementById(`emotion`)
 let playBtn = document.getElementById(`play`)
-playBtn.addEventListener('click',()=>{
-    let vid = document.getElementById("show")
+let vid = document.getElementById("show")
+let musicPlay = document.getElementById('music-play')
+vid.addEventListener('submit',(e)=>{
+    e.preventDefault()
     console.log("ok")
     let x = Math.floor(Math.random() * 10);
     if(gen.value === "US/UK" && emo.value==="sad"){
         document.body.style.background = "url('https://i.imgur.com/9WgJg0G.gif')"
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=usSad[x]
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=usSad[x]
     console.log("usad")}
     else if(gen.value === "US/UK" && emo.value==="happy"){
         document.body.style.background = "url('https://wallpapercave.com/wp/wp2757890.gif')";
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=usHap[x]
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=usHap[x]
     console.log("uhap")}
     else if(gen.value === "US/UK" && emo.value==="ins"){
         document.body.style.background = "url('https://wallpaperaccess.com/full/723262.gif')"
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=usIns[x]}
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=usIns[x]}
     else if(gen.value === "Vpop" && emo.value==="sad"){
         document.body.style.background = "url('https://i.imgur.com/9WgJg0G.gif')"
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=vSad[x]}
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=vSad[x]}
     else if(gen.value === "Vpop" && emo.value==="happy"){
         document.body.style.background = "url('https://wallpapercave.com/wp/wp2757890.gif')";
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=vHap[x]}
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=vHap[x]}
     else if(gen.value === "Vpop" && emo.value==="ins"){
         document.body.style.background = "url('https://wallpaperaccess.com/full/723262.gif')"
         document.body.style.backgroundSize = "cover"
         document.body.style.transition = "6s"
-        vid.innerHTML+=vIns[x]}
+        musicPlay.innerHTML =''
+        musicPlay.innerHTML+=vIns[x]}
 })
